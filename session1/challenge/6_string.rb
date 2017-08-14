@@ -8,4 +8,9 @@
 # odds_and_evens("abcdefg",false)   # => "aceg"
 
 def odds_and_evens(string, return_odds)
+ if return_odds == true
+   return string.chars.select.with_index {|str, index | index.odd?}.join
+ else
+   return string.chars.select.with_index {|str, index | index.even?}.join
+ end
 end
